@@ -23,14 +23,4 @@
         android:textSize="18sp"
         android:typeface="monospace" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="25dp"
-        android:text="Completed"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
 </androidx.appcompat.widget.LinearLayoutCompat>

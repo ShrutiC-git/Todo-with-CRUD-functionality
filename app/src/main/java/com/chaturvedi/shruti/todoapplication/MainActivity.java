@@ -71,14 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        ItemsAdapter.onCheckBox onCheckBox = new ItemsAdapter.onCheckBox() {
-            @Override
-            public void onItemChecked(int position) {
-                checked.set(position, !checked.get(position));
-            }
-        };
-
-        itemsAdapter = new ItemsAdapter(items, onLongClickListener, onClickListener, onCheckBox);
+        itemsAdapter = new ItemsAdapter(items, onLongClickListener, onClickListener);
         rvList.setAdapter(itemsAdapter);
         rvList.setLayoutManager(new LinearLayoutManager(this));
 
