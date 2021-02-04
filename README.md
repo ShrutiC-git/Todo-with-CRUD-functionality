@@ -41,7 +41,7 @@ The designing of the UI is and customizing it to represent list items.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2021] [Shruti Chaturvedi]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
