@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Todo Application</string>
+    <string name="add">ADD</string>
+    <string name="etHint">Enter Your ToDo Here</string>
+</resources>
