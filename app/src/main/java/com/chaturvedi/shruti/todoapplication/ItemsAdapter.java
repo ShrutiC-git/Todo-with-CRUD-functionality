@@ -22,21 +22,17 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
         void onItemClicked(int position);
     }
 
-    public interface onCheckBox {
-        void onItemChecked(int position);
-    }
 
     List<String> items;
     OnLongClickListener longClickListener;
     OnClickListener clickListener;
-    onCheckBox checkBox;
 
 
-    public ItemsAdapter(List<String> items, OnLongClickListener longClickListener, OnClickListener clickListener, onCheckBox checkBox) {
+    public ItemsAdapter(List<String> items, OnLongClickListener longClickListener, OnClickListener clickListener) {
         this.items = items;
         this.longClickListener = longClickListener;
         this.clickListener = clickListener;
-        this.checkBox = checkBox;
+
     }
 
     @NonNull
@@ -64,13 +60,11 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
     class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvItem;
-        CheckBox checkBoxItem;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             //tvItem = itemView.findViewById(android.R.id.text1);
             tvItem = itemView.findViewById(R.id.text1);
-            checkBoxItem = itemView.findViewById(R.id.checkBox);
         }
 
         //We do not want the Adapter to handle the data, instead we pass it to the bind method
@@ -93,12 +87,6 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
                 }
             });
 
-            checkBoxItem.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    checkBox.onItemChecked(getAdapterPosition());
-                }
-            });
         }
     }
 }
